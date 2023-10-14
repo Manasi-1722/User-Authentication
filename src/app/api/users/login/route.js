@@ -2,7 +2,7 @@ import User from "@/models/user";
 import bcryptjs from 'bcryptjs';
 import Connection from "@/database/config";
 import jwt from "jsonwebtoken";
-import { NextResponse } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
 
 
 // Database connection is established
@@ -16,7 +16,7 @@ export const POST = async (NextRequest) => {
 
         // If any field is not given - Error
         if(!username || !password) {
-            return new Response("username and password are required", { status: 401 });
+            return new Response("Username and Password is required", { status: 401 });
         }
 
         // when username is already exist - Error

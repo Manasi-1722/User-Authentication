@@ -25,7 +25,7 @@ const Register = () => {
 
         // API CALL
         try {
-            const response = await axios.post("api/users/register", data);
+            const response = await axios.post("/api/users/register", data);
             setData(defaultData);
 
             if(response.status === 200)
@@ -77,7 +77,7 @@ const Register = () => {
                 </form>
             </div>
         </div>
-    )
+    );
 }
 
 export default Register;

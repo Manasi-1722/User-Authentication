@@ -16,7 +16,7 @@ const Input = ({ label, type, id, ...props}) => {
             />
 
         </div>
-    )
+    );
 }
 
 export default Input;

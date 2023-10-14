@@ -7,8 +7,8 @@ const Profile = () => {
 
     const router = useRouter();
 
-    const onLogout = async (e) => {
-        e.preventDefault();
+    const onLogout = async () => {
+    
 
         // API CALL
         const response = await axios.get('/api/users/logout');

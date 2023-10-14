@@ -1,12 +1,9 @@
-import Connection from "@/database/config";
-// import jwt from "jsonwebtoken";
+
+
 import { NextResponse } from "next/server";
 
 
-// Database connection is established
-Connection(); 
-
-export const GET = async (NextRequest) => {
+export const GET = async () => {
     try {
         const response = NextResponse.json({ message: 'Logout successful', success: true });
 

@@ -1,6 +1,7 @@
 import User from "@/models/user";
 import bcryptjs from 'bcryptjs';
 import Connection from "@/database/config";
+import { NextRequest, NextResponse } from "next/server";
 
 // Database connection is established
 Connection(); 
@@ -29,7 +30,7 @@ export const POST = async (NextRequest) => {
         const newUser = new User ({
             name, 
             username,
-            password: hashedPassword
+            password: hashedPassword,
         })
 
         await newUser.save();
