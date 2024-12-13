@@ -2,15 +2,15 @@ import User from "@/models/user";
 import bcryptjs from 'bcryptjs';
 import Connection from "@/database/config";
 import jwt from "jsonwebtoken";
-import { NextRequest, NextResponse } from "next/server";
+import { NextResponse } from "next/server";
 
 
 // Database connection is established
 Connection(); 
 
-export const POST = async (NextRequest) => {
+export const POST = async (NextFetchEvent) => {
     try {
-        const body = await NextRequest.json();
+        const body = await NextFetchEvent.json();
 
         const { username, password } = body;
 
